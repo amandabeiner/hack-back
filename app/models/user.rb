@@ -10,6 +10,10 @@ class User < ActiveRecord::Base
     user.github_url = auth['info']['urls']['GitHub']
     user.token = auth['credentials']['token']
 
+    if auth["provider"] == "github"
+      user.role = "developer"
+    end
+
     user.save
     user
   end

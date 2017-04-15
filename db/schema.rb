@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20170415193957) do
     t.string "email"
     t.string "image_url"
     t.string "github_url"
+    t.string "role"
   end
 
 end

@@ -9,6 +9,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :email
       t.string :image_url
       t.string :github_url
+      t.string :role
     end
   end
 end
