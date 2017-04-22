@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/organizations/:id/profile', to: 'profile#show'
   get '/developers/:id/profile', to: 'profile#show'
   get '/projects/:id', to: 'profile#show'
+  get '/projects', to: 'profile#show'
 
   root 'home#show'
 

@@ -7,7 +7,7 @@ import ContactPerson from '../../sharedResources/components/ContactPerson';
 import OrganizationProfile from '../../sharedResources/components/OrganizationProfile';
 
 class ProjectShowContainer extends Component {
-  componentDidMount(){
+  componentWillMount(){
     let projectId = this.props.params.id
     this.props.getProject(projectId)
   }
