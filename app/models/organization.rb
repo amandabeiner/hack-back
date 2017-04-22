@@ -4,4 +4,5 @@ class Organization < ApplicationRecord
   validates :mission_statement, presence: true
 
   belongs_to :user
+  has_many :projects
 end
