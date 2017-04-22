@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get '/profile', to: 'profile#show'
+  get '/organizations/:id/profile', to: 'profile#show'
+
   root 'home#show'
 
   get '/auth/:provider/callback', to: 'sessions#create'
