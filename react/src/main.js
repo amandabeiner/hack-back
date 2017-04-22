@@ -7,7 +7,7 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import configureStore from './sharedResources/store/configureStore';
 
 import SignInTile from './static/SignInTile'
-import App from './puppySetup/containers/App'
+import DevProfileContainer from './userProfile/containers/DevProfileContainer'
 import OrgProfileContainer from './organizationProfile/containers/OrgProfileContainer'
 
 const store = configureStore();
@@ -23,7 +23,7 @@ if(document.getElementById('main')){
   ReactDOM.render(
     <Provider store={store}>
       <Router history={history}>
-        <Route path='profile' component={App} />
+        <Route path='developers/:id/profile' component={DevProfileContainer} />
         <Route path='organizations/:id/profile' component={OrgProfileContainer}/>
       </Router>
     </Provider>, document.getElementById('main')

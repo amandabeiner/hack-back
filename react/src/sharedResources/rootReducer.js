@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import { puppyReducer as puppies } from '../puppySetup/reducers/puppies'
-import { orgProfileReducer as orgProfile } from '../organizationProfile/reducers/orgProfile'
+import { userProfileReducer as user } from '../userProfile/reducers/userProfiles'
 import { routerReducer as routing } from 'react-router-redux';
+import { orgProfileReducer as orgProfile } from '../organizationProfile/reducers/orgProfile'
 
 const rootReducer = combineReducers({
-  puppies,
+  user,
   orgProfile,
   routing
 })
