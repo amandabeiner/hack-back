@@ -7,7 +7,7 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import configureStore from './sharedResources/store/configureStore';
 
 import SignInTile from './static/SignInTile'
-import App from './userProfile/containers/App'
+import DevProfileContainer from './userProfile/containers/DevProfileContainer'
 
 const store = configureStore();
 const history = syncHistoryWithStore(browserHistory, store)
@@ -22,7 +22,7 @@ if(document.getElementById('main')){
   ReactDOM.render(
     <Provider store={store}>
       <Router history={history}>
-        <Route path='profile' component={App} />
+        <Route path='developer/:id/profile' component={DevProfileContainer} />
       </Router>
     </Provider>, document.getElementById('main')
   )

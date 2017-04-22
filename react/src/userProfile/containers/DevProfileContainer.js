@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import UserProfileInfo from '../components/UserProfileInfo'
-// import { getPuppy } from '../actions/puppy'
 import { getUser } from '../actions/userProfile'
 import { connect } from 'react-redux'
 
-class App extends Component {
+class DevProfileContainer extends Component {
   componentDidMount(){
-    // this.props.getPuppies();
-    this.props.getUserProfile();
+    this.props.getUserProfile(this.props.params.id);
   }
 
   render() {
@@ -26,20 +24,16 @@ class App extends Component {
 
 let mapStateToProps = state => {
   return {
-    // puppies: state.puppies.puppies
     user: state.user
   }
 }
 
 let mapDispatchToProps = dispatch => {
   return {
-    // getPuppies: () => {
-    //   dispatch(getPuppy())
-    // }
-    getUserProfile: () => {
-      dispatch(getUser());
+    getUserProfile: (userId) => {
+      dispatch(getUser(userId));
     }
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(DevProfileContainer);

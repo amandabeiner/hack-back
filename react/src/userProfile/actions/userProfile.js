@@ -13,9 +13,9 @@ export const getUserSuccess = data => {
   }
 }
 
-export const getUser = () => {
+export const getUser = (userId) => {
   return (dispatch) => {
-    fetch(`/api/v1/users/1`)
+    fetch(`/api/v1/users/${userId}`)
     .then(response => {
       if (response.ok) {
         return response
