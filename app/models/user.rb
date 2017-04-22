@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
   has_many :organizations
+  has_many :portfolio_project_users
+  has_many :portfolio_projects, through: :portfolio_project_users
+
+  validates :years_of_experience, inclusion: {in: ["0-1", "1-2", "3-5", "5-10", "10+"]}, allow_nil: true
 
   def self.find_or_create_by_auth(auth)
 
