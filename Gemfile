@@ -11,6 +11,7 @@ gem 'omniauth-github'
 gem 'omniauth-facebook'
 gem 'omniauth-linkedin-oauth2'
 gem 'omniauth-google-oauth2'
+gem 'active_model_serializers'
 
 group :development do
   gem 'listen', '~> 3.0.5'

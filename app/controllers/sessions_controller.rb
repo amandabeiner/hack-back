@@ -5,7 +5,12 @@ class SessionsController < ApplicationController
 
     if user
       session[:user_id] = user.id
-      redirect_to profile_path
+      if user.role == "developer"
+        # redirect_to 'developer/:id/profile'
+      else
+        organization = user.organizations.first
+        redirect_to "/organizations/#{organization.id}/profile"
+      end
     else
       redirect_to root_path
     end
