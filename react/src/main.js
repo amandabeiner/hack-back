@@ -8,6 +8,7 @@ import configureStore from './sharedResources/store/configureStore';
 
 import SignInTile from './static/SignInTile'
 import DevProfileContainer from './userProfile/containers/DevProfileContainer'
+import OrgProfileContainer from './organizationProfile/containers/OrgProfileContainer'
 
 const store = configureStore();
 const history = syncHistoryWithStore(browserHistory, store)
@@ -23,6 +24,7 @@ if(document.getElementById('main')){
     <Provider store={store}>
       <Router history={history}>
         <Route path='developer/:id/profile' component={DevProfileContainer} />
+        <Route path='organizations/:id/profile' component={OrgProfileContainer}/>
       </Router>
     </Provider>, document.getElementById('main')
   )
