@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
 import { getOrgProfile } from '../actions/orgProfile';
-import Profile from '../components/Profile';
-import ContactPerson from '../components/ContactPerson';
+import OrganizationProfile from '../../sharedResources/components/OrganizationProfile';
+import ContactPerson from '../../sharedResources/components/ContactPerson';
 
 class OrgProfileContainer extends Component {
   componentDidMount(){
@@ -20,7 +20,7 @@ class OrgProfileContainer extends Component {
         <Profile
           name={organization.name}
           description={organization.description}
-          mission_statement={organization.mission_statement}
+          missionStatement={organization.mission_statement}
           website={organization.website}
         />
         <ContactPerson

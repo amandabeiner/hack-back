@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   get '/profile', to: 'profile#show'
   get '/organizations/:id/profile', to: 'profile#show'
+  get '/developers/:id/profile', to: 'profile#show'
+  get '/projects/:id', to: 'profile#show'
 
   root 'home#show'
 
   get '/auth/:provider/callback', to: 'sessions#create'
 
-  get '/developers/:id/profile', to: 'profile#show'
 
   delete '/logout', to: 'sessions#destroy'
 
