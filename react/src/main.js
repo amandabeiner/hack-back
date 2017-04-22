@@ -7,7 +7,7 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import configureStore from './sharedResources/store/configureStore';
 
 import SignInTile from './static/SignInTile'
-import App from './puppySetup/containers/App'
+import App from './userProfile/containers/App'
 
 const store = configureStore();
 const history = syncHistoryWithStore(browserHistory, store)
