@@ -17,7 +17,7 @@ class OrgProfileContainer extends Component {
 
     return(
       <div>
-        <Profile
+        <OrganizationProfile
           name={organization.name}
           description={organization.description}
           missionStatement={organization.mission_statement}
