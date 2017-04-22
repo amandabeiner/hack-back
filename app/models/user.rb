@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :organizations
 
   def self.find_or_create_by_auth(auth)
 
