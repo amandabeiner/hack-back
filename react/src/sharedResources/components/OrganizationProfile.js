@@ -1,14 +1,14 @@
 import React from 'react';
 
-const Profile = props => {
+const OrganizationProfile = props => {
   return(
     <div>
       <h1>{props.name}</h1>
       <p>{props.description}</p>
-      <p>{props.mission_statement}</p>
+      <p>{props.missionStatement}</p>
       <a href={props.website}>Website</a>
     </div>
   )
 }
 
-export default Profile;
+export default OrganizationProfile;
