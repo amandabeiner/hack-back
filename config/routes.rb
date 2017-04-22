@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get '/auth/:provider/callback', to: 'sessions#create'
 
-  get '/developer/:id/profile', to: 'profile#show'
+  get '/developers/:id/profile', to: 'profile#show'
 
   namespace :api do
     namespace :v1 do
