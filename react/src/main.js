@@ -23,7 +23,7 @@ if(document.getElementById('main')){
   ReactDOM.render(
     <Provider store={store}>
       <Router history={history}>
-        <Route path='developer/:id/profile' component={DevProfileContainer} />
+        <Route path='developers/:id/profile' component={DevProfileContainer} />
         <Route path='organizations/:id/profile' component={OrgProfileContainer}/>
       </Router>
     </Provider>, document.getElementById('main')
