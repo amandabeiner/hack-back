@@ -1,7 +1,9 @@
 import { FETCH_ORG_PROFILE_SUCCESS } from '../actions/orgProfile'
 
 const initialState = {
-  organization: {}
+  organization: {
+    user: {}
+  }
 }
 
 export const orgProfileReducer = (state = initialState, action) => {

@@ -8,7 +8,8 @@ class SessionsController < ApplicationController
       if user.role == "developer"
         redirect_to "/developers/#{user.id}/profile"
       else
-        redirect_to profile_path
+        organization = user.organizations.first
+        redirect_to "/organizations/#{organization.id}/profile"
       end
     else
       redirect_to root_path
