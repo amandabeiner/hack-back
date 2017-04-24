@@ -40,6 +40,17 @@ ActiveRecord::Schema.define(version: 20170422193746) do
     t.string "github_url"
   end
 
+  create_table "projects", force: :cascade do |t|
+    t.string   "name",                            null: false
+    t.string   "description",                     null: false
+    t.string   "stack"
+    t.boolean  "claimed",         default: false
+    t.integer  "organization_id"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.index ["organization_id"], name: "index_projects_on_organization_id", using: :btree
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "uid"
     t.string   "provider"
