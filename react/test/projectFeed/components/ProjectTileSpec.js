@@ -12,7 +12,6 @@ describe('ProjectTile', () =>{
     />
   )
   it('displays a preview of the project stats', () =>{
-    console.log(projectTile.text())
     expect(projectTile.text()).toMatch('Totally awesome project')
     expect(projectTile.text()).toMatch('it is the most awesome')
     expect(projectTile.text()).toMatch('sinatra/react')
@@ -21,7 +20,8 @@ describe('ProjectTile', () =>{
 
   it('displays a link to the project show page', () => {
     let link = projectTile.find(Link)
+
     expect(link).toBePresent()
-    // expect(projectTile.text()).toMatch("<Link />")
+    expect(link.text()).toMatch("Totally awesome project");
   })
 })
