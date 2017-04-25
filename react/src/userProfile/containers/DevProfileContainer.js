@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UserProfileInfo from '../components/UserProfileInfo'
+import UserProfile from '../components/UserProfile'
 import { getUser } from '../actions/userProfile'
 import { connect } from 'react-redux'
 
@@ -9,13 +9,14 @@ class DevProfileContainer extends Component {
   }
 
   render() {
-    let user = this.props.user.user ? this.props.user.user.user : null;
-
-    let userProfileInfo = user ? <UserProfileInfo user={user}/> : null;
+    debugger;
+    let user = this.props.user
+    //
+    // let userProfileInfo = user ? <UserProfile user={user}/> : null;
 
     return(
       <div>
-        {userProfileInfo}
+        <UserProfile user={user.user} />
       </div>
     )
   }
@@ -23,7 +24,7 @@ class DevProfileContainer extends Component {
 
 let mapStateToProps = state => {
   return {
-    user: state.user
+    user: state.user.user.user.user
   }
 }
 
