@@ -9,14 +9,11 @@ class DevProfileContainer extends Component {
   }
 
   render() {
-    debugger;
     let user = this.props.user
-    //
-    // let userProfileInfo = user ? <UserProfile user={user}/> : null;
 
     return(
       <div>
-        <UserProfile user={user.user} />
+        <UserProfile user={user} />
       </div>
     )
   }
@@ -24,7 +21,7 @@ class DevProfileContainer extends Component {
 
 let mapStateToProps = state => {
   return {
-    user: state.user.user.user.user
+    user: state.user
   }
 }
 

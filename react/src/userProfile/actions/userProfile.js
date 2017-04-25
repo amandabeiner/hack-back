@@ -30,7 +30,7 @@ export const getUser = (userId) => {
       return user
     })
     .then(user => {
-      return dispatch(getUserSuccess(user))
+      return dispatch(getUserSuccess(user.user))
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
