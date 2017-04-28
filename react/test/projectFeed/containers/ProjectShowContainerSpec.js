@@ -1,8 +1,7 @@
 import ProjectShowContainer from 'projectFeed/containers/ProjectShowContainer';
 import Project from 'projectFeed/components/Project'
 
-xdescribe('ProjectShowContainer', () => {
-  let wrapper;
+describe('ProjectShowContainer', () => {
 
   beforeEach(() => {
     spyOn(global, 'fetch').and.callFake(url => {
@@ -11,14 +10,12 @@ xdescribe('ProjectShowContainer', () => {
       }
     });
 
-    wrapper = shallow(
-      <ProjectShowContainer />
-    )
+    wrapper = mountReactAppAt('/projects/1')
   });
 
   it('should render a Project component', done => {
     setTimeout(() => {
-      console.log(wrapper)
+      debugger;
       expect(wrapper.find(Project)).toBePresent();
       done();
     }, 0);

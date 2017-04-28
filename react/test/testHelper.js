@@ -1,4 +1,5 @@
 import createResponseFromFixture from './support/createResponseFromFixture';
+import mountReactAppAt from './support/mountReactAppAt'
 import { push, syncHistoryWithStore } from 'react-router-redux';
 import { browserHistory } from 'react-router';
 import { shallow, mount } from 'enzyme';
@@ -6,17 +7,22 @@ import jasmineEnzyme from 'jasmine-enzyme';
 import React from 'react';
 import $ from 'jquery';
 import 'jasmine-ajax';
+let store, page, wrapper;
 
 Object.assign(global, {
   browserHistory,
   syncHistoryWithStore,
+  store,
+  page,
   push,
   jasmineEnzyme,
   mount,
   React,
   shallow,
   $,
-  createResponseFromFixture
+  createResponseFromFixture,
+  mountReactAppAt,
+  wrapper
 });
 
 beforeEach(() => {

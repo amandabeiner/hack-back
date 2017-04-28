@@ -9,13 +9,10 @@ import OrgProfileContainer from './organizationProfile/containers/OrgProfileCont
 import ProjectShowContainer from './projectFeed/containers/ProjectShowContainer'
 import ProjectIndexContainer from './projectFeed/containers/ProjectIndexContainer'
 
-const store = configureStore();
-const history = syncHistoryWithStore(browserHistory, store)
-
 const Root = props => {
   return(
-    <Provider store={store}>
-      <Router history={history}>
+    <Provider store={props.store}>
+      <Router history={props.history}>
         <Route path='developers/:id/profile' component={DevProfileContainer} />
         <Route path='organizations/:id/profile' component={OrgProfileContainer}/>
         <Route path='projects' component={ProjectIndexContainer} />

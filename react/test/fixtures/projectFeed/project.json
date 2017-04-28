@@ -1,5 +1,5 @@
 {
-  "project": [
+  "project":
     {
       "id": "1",
       "name": "test project",
@@ -38,5 +38,4 @@
         "interests": "null"
       }
     }
-  ]
 }
