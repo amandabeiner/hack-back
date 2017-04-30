@@ -3,10 +3,10 @@ class Api::V1::ProjectSerializer < ActiveModel::Serializer
 
 
   def organization
-    object.organization
+    Api::V1::ProjectOrganizationSerializer.new(object.organization, { root: false })
   end
 
   def contact
-    object.organization.user
+    Api::V1::ContactSerializer.new(object.organization.user, { root: false })
   end
 end

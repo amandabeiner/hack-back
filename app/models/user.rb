@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
     if auth["provider"] == "github"
       return find_or_create_developer(auth)
     elsif organization_auth?(auth)
-      return find_or_create_organization(auth)
+      return find_or_create_contact(auth)
     end
   end
 
@@ -30,12 +30,12 @@ class User < ActiveRecord::Base
     user
   end
 
-  def self.find_or_create_organization(auth)
+  def self.find_or_create_contact(auth)
     user = User.find_or_create_by(provider: auth['provider'], uid: auth['uid'])
     user.name = auth['info']['name']
     user.email = auth['info']['email']
     user.image_url = auth['info']['image']
-    user.role = "organization"
+    user.role = "contact"
     user.save
     user
   end
