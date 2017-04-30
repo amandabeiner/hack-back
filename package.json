@@ -29,6 +29,7 @@
     "karma-webpack": "^1.7.0",
     "phantomjs-prebuilt": "^2.1.7",
     "react-addons-test-utils": "^15.0.2",
+    "react-test-renderer": "^15.5.4",
     "redux-devtools": "^3.2.0"
   },
   "dependencies": {
@@ -45,6 +46,7 @@
     "redux": "^3.5.2",
     "redux-form": "^5.2.3",
     "redux-thunk": "^2.1.0",
-    "webpack": "^1.13.0"
+    "webpack": "^1.13.0",
+    "whatwg-fetch": "^2.0.3"
   }
 }

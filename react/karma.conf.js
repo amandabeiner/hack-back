@@ -15,7 +15,9 @@ module.exports = function(config) {
       // use Babel polyfill to emulate a full ES6 environment in PhantomJS
       '../node_modules/babel-polyfill/dist/polyfill.js',
       // entry file for Webpack
-      'test/testHelper.js'
+      'test/testHelper.js',
+      // get fetch to work with PhantomJS
+      '../node_modules/whatwg-fetch/fetch.js'
     ],
 
     // before serving test/testHelper.js to the browser

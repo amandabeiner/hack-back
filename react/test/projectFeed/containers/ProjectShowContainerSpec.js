@@ -15,8 +15,7 @@ describe('ProjectShowContainer', () => {
 
   it('should render a Project component', done => {
     setTimeout(() => {
-      debugger;
-      expect(wrapper.find(Project)).toBePresent();
+      expect(wrapper.text()).toMatch('test project');
       done();
     }, 0);
   });
