@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UserProfileInfo from '../components/UserProfileInfo'
+import UserProfile from '../components/UserProfile'
 import { getUser } from '../actions/userProfile'
 import { connect } from 'react-redux'
 
@@ -9,13 +9,11 @@ class DevProfileContainer extends Component {
   }
 
   render() {
-    let user = this.props.user.user ? this.props.user.user.user : null;
-
-    let userProfileInfo = user ? <UserProfileInfo user={user}/> : null;
+    let user = this.props.user
 
     return(
       <div>
-        {userProfileInfo}
+        <UserProfile user={user} />
       </div>
     )
   }

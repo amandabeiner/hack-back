@@ -7,7 +7,8 @@
     "heroku-postbuild": "NODE_ENV=production npm run webpack -- -p",
     "start": "npm run webpack -- --watch",
     "test": "node_modules/.bin/karma start react/karma.conf.js",
-    "webpack": "node_modules/.bin/webpack --config ./react/webpack.config.js"
+    "webpack": "node_modules/.bin/webpack --config ./react/webpack.config.js",
+    "postinstall": "node node_modules/phantomjs-prebuilt/install.js"
   },
   "author": "",
   "license": "ISC",
@@ -21,12 +22,14 @@
     "karma": "^0.13.22",
     "karma-coverage": "^0.5.5",
     "karma-jasmine": "^0.3.8",
+    "karma-json-fixtures-preprocessor": "^0.0.6",
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.26",
     "karma-webpack": "^1.7.0",
     "phantomjs-prebuilt": "^2.1.7",
     "react-addons-test-utils": "^15.0.2",
+    "react-test-renderer": "^15.5.4",
     "redux-devtools": "^3.2.0"
   },
   "dependencies": {
@@ -43,6 +46,7 @@
     "redux": "^3.5.2",
     "redux-form": "^5.2.3",
     "redux-thunk": "^2.1.0",
-    "webpack": "^1.13.0"
+    "webpack": "^1.13.0",
+    "whatwg-fetch": "^2.0.3"
   }
 }
