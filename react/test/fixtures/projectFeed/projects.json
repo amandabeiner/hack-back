@@ -1,0 +1,80 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Build something",
+      "description": "Build something cooler than your friends",
+      "stack": "None of your business",
+      "claimed": false,
+      "created_at": "2017-05-01T01:51:47.492Z",
+      "updated_at": "2017-05-01T01:51:47.492Z",
+      "organization": {
+        "id": 1,
+        "name": "Hack Back",
+        "description": "Creating things",
+        "mission_statement": "Using tech to actually do stuff",
+        "website": "www.good.com",
+        "user_id": 2,
+        "created_at": "2017-04-30T23:49:38.650Z",
+        "updated_at": "2017-04-30T23:51:11.825Z"
+      },
+      "contact": {
+        "id": 2,
+        "uid": "117061541884401848991",
+        "provider": "google_oauth2",
+        "token": null,
+        "nickname": null,
+        "name": "Michael Thomson",
+        "email": "michaelgt04@gmail.com",
+        "image_url": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg",
+        "github_url": null,
+        "role": "organization",
+        "created_at": "2017-04-30T23:48:08.074Z",
+        "updated_at": "2017-04-30T23:48:08.076Z",
+        "bio": null,
+        "current_position": null,
+        "years_of_experience": null,
+        "skills": null,
+        "interests": null
+      }
+    },
+    {
+      "id": 2,
+      "name": "Be better",
+      "description": "You are the best",
+      "stack": "Anything you want",
+      "claimed": true,
+      "created_at": "2017-05-01T01:53:38.129Z",
+      "updated_at": "2017-05-01T01:53:38.129Z",
+      "organization": {
+        "id": 1,
+        "name": "Hack Back",
+        "description": "Creating things",
+        "mission_statement": "Using tech to actually do stuff",
+        "website": "www.good.com",
+        "user_id": 2,
+        "created_at": "2017-04-30T23:49:38.650Z",
+        "updated_at": "2017-04-30T23:51:11.825Z"
+      },
+      "contact": {
+        "id": 2,
+        "uid": "117061541884401848991",
+        "provider": "google_oauth2",
+        "token": null,
+        "nickname": null,
+        "name": "Michael Thomson",
+        "email": "michaelgt04@gmail.com",
+        "image_url": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg",
+        "github_url": null,
+        "role": "organization",
+        "created_at": "2017-04-30T23:48:08.074Z",
+        "updated_at": "2017-04-30T23:48:08.076Z",
+        "bio": null,
+        "current_position": null,
+        "years_of_experience": null,
+        "skills": null,
+        "interests": null
+      }
+    }
+  ]
+}

@@ -10,7 +10,6 @@ describe('Project', () => {
         description={"it is the most awesome"}
         stack={"sinatra/react"}
         claimed={true}
-
       />
     )
 
