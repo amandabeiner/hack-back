@@ -4,6 +4,7 @@ class Contact < ApplicationRecord
   validates :image_url, presence: true
   validates :uid, presence: true
   validates :provider, presence: true
+  has_many :organizations
 
   private
 
