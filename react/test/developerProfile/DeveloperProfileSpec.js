@@ -1,8 +1,8 @@
-import UserProfile from 'userProfile/components/UserProfile';
-import UserInfo from 'userProfile/components/UserInfo';
-import PortfolioProject from 'userProfile/components/PortfolioProject';
+import DeveloperProfile from 'developerProfile/components/DeveloperProfile';
+import DeveloperInfo from 'developerProfile/components/DeveloperInfo';
+import PortfolioProject from 'developerProfile/components/PortfolioProject';
 
-describe('UserProfile', () => {
+describe('DeveloperProfile', () => {
   let userData =   {
     user: {
       id: 2,
@@ -32,8 +32,8 @@ describe('UserProfile', () => {
   }
 
   let wrapper = shallow(
-    <UserProfile
-      user={userData.user}
+    <DeveloperProfile
+      developer={userData.user}
     />
   );
 
@@ -47,7 +47,7 @@ describe('UserProfile', () => {
 
 
   it("renders a UserInfo component", () => {
-    expect(wrapper.find(UserInfo)).toBePresent();
+    expect(wrapper.find(DeveloperInfo)).toBePresent();
   });
 
   it("renders PortfolioProject components", () => {
