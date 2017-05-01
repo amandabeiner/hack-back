@@ -27,7 +27,7 @@ describe Api::V1::ProjectsController do
               },
             "contact"=>{
               "id"=>contact.id,
-              "name"=>"amanda beiner",
+              "name"=>"Amanda Beiner",
               "email"=>"myemail@me.com",
               "image_url"=>"mypicture.com",
             }
@@ -67,7 +67,7 @@ describe Api::V1::ProjectsController do
           },
           "contact"=> {
             "id"=> contact.id,
-            "name"=> "amanda beiner",
+            "name"=> "Amanda Beiner",
             "email"=> "myemail@me.com",
             "image_url"=> "mypicture.com"
           }
