@@ -4,6 +4,6 @@ FactoryGirl.define do
     description "the best one. this one. obviously."
     mission_statement "crush it"
     website "www.thebestorg.org"
-    user
+    contact
   end
 end

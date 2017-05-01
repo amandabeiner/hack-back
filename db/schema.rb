@@ -10,27 +10,56 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170422193746) do
+ActiveRecord::Schema.define(version: 20170501145229) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "contacts", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.string   "email",      null: false
+    t.string   "image_url",  null: false
+    t.string   "uid",        null: false
+    t.string   "provider",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "developers", force: :cascade do |t|
+    t.string   "uid"
+    t.string   "provider"
+    t.string   "token"
+    t.string   "nickname"
+    t.string   "name"
+    t.string   "email"
+    t.string   "image_url"
+    t.string   "github_url"
+    t.string   "role"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "bio"
+    t.string   "current_position"
+    t.string   "years_of_experience"
+    t.text     "skills"
+    t.text     "interests"
+  end
 
   create_table "organizations", force: :cascade do |t|
     t.string   "name",              null: false
     t.text     "description",       null: false
     t.text     "mission_statement", null: false
     t.string   "website"
-    t.integer  "user_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.index ["user_id"], name: "index_organizations_on_user_id", using: :btree
+    t.integer  "contact_id"
+    t.index ["contact_id"], name: "index_organizations_on_contact_id", using: :btree
   end
 
   create_table "portfolio_project_users", force: :cascade do |t|
-    t.integer "user_id",              null: false
     t.integer "portfolio_project_id", null: false
+    t.integer "developer_id"
+    t.index ["developer_id"], name: "index_portfolio_project_users_on_developer_id", using: :btree
     t.index ["portfolio_project_id"], name: "index_portfolio_project_users_on_portfolio_project_id", using: :btree
-    t.index ["user_id"], name: "index_portfolio_project_users_on_user_id", using: :btree
   end
 
   create_table "portfolio_projects", force: :cascade do |t|
@@ -49,25 +78,6 @@ ActiveRecord::Schema.define(version: 20170422193746) do
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
     t.index ["organization_id"], name: "index_projects_on_organization_id", using: :btree
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "uid"
-    t.string   "provider"
-    t.string   "token"
-    t.string   "nickname"
-    t.string   "name"
-    t.string   "email"
-    t.string   "image_url"
-    t.string   "github_url"
-    t.string   "role"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.text     "bio"
-    t.string   "current_position"
-    t.string   "years_of_experience"
-    t.text     "skills"
-    t.text     "interests"
   end
 
 end
