@@ -15,7 +15,7 @@ export const getDeveloperSuccess = data => {
 
 export const getDeveloper = (developerId) => {
   return (dispatch) => {
-    fetch(`/api/v1/users/${developerId}`)
+    fetch(`/api/v1/developers/${developerId}`)
     .then(response => {
       if (response.ok) {
         return response
