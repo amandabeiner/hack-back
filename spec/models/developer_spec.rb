@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe Developer, type: :model do
 
-  describe "user" do
+  describe "Developer" do
     let!(:developer) {FactoryGirl.create(:developer)}
 
     it "has the required attributes" do
