@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
       organization = contact.organizations.first
       redirect_to "/organizations/#{organization.id}/profile"
     else
-      binding.pry
       developer = Developer.find_or_create_developer(auth_hash)
       session[:developer_id] = developer.id
       redirect_to "/developers/#{developer.id}/profile"
