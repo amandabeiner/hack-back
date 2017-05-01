@@ -7,6 +7,6 @@ class Api::V1::ProjectSerializer < ActiveModel::Serializer
   end
 
   def contact
-    Api::V1::ContactSerializer.new(object.organization.user, { root: false })
+    Api::V1::ContactSerializer.new(object.organization.contact, { root: false })
   end
 end
