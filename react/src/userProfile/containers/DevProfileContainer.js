@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UserProfileInfo from '../components/UserProfileInfo'
+import UserProfile from '../components/UserProfile'
 import { getUser } from '../actions/userProfile'
 import { connect } from 'react-redux'
 
