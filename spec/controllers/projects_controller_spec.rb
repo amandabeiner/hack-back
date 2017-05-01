@@ -1,8 +1,8 @@
 require "rails_helper"
 
 describe Api::V1::ProjectsController do
-  let(:user) { FactoryGirl.create(:user) }
-  let(:organization) { FactoryGirl.create(:organization, user: user) }
+  let(:contact) { FactoryGirl.create(:contact) }
+  let(:organization) { FactoryGirl.create(:organization, contact: contact) }
   let!(:project) { FactoryGirl.create(:project, organization: organization) }
 
   describe "#index" do
@@ -26,8 +26,8 @@ describe Api::V1::ProjectsController do
                 "website"=>"www.thebestorg.org",
               },
             "contact"=>{
-              "id"=>user.id,
-              "name"=>"amanda beiner",
+              "id"=>contact.id,
+              "name"=>"Amanda Beiner",
               "email"=>"myemail@me.com",
               "image_url"=>"mypicture.com",
             }
@@ -39,7 +39,7 @@ describe Api::V1::ProjectsController do
 
     it "should return a json representation of the projects in the database" do
       get :index
-      
+
       parsed = JSON.parse(response.body)
 
       expect(response.content_type).to eq("application/json")
@@ -66,8 +66,8 @@ describe Api::V1::ProjectsController do
             "website"=> "www.thebestorg.org"
           },
           "contact"=> {
-            "id"=> user.id,
-            "name"=> "amanda beiner",
+            "id"=> contact.id,
+            "name"=> "Amanda Beiner",
             "email"=> "myemail@me.com",
             "image_url"=> "mypicture.com"
           }

@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :user do
+  factory :developer do
     provider "Github"
     uid "1"
     nickname "amandabeiner"
@@ -7,7 +7,5 @@ FactoryGirl.define do
     email "myemail@me.com"
     image_url "mypicture.com"
     github_url "github.com/amandabeiner"
-    role "developer"
-
   end
 end
