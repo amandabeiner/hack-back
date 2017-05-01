@@ -1,19 +1,19 @@
-const FETCH_USER = 'FETCH_USER'
-const FETCH_USER_SUCCESS = 'FETCH_USER_SUCCESS'
+const FETCH_DEVELOPER = 'FETCH_DEVELOPER'
+const FETCH_DEVELOPER_SUCCESS = 'FETCH_DEVELOPER_SUCCESS'
 
 export {
-  FETCH_USER,
-  FETCH_USER_SUCCESS
+  FETCH_DEVELOPER,
+  FETCH_DEVELOPER_SUCCESS
 }
 
-export const getUserSuccess = data => {
+export const getDeveloperSuccess = data => {
   return {
-    type: FETCH_USER_SUCCESS,
+    type: FETCH_DEVELOPER_SUCCESS,
     user: data
   }
 }
 
-export const getUser = (userId) => {
+export const getDeveloper = (userId) => {
   return (dispatch) => {
     fetch(`/api/v1/users/${userId}`)
     .then(response => {
@@ -26,11 +26,11 @@ export const getUser = (userId) => {
       }
     })
     .then(response => {
-      let user = response.json()
-      return user
+      let developer = response.json()
+      return developer
     })
-    .then(user => {
-      return dispatch(getUserSuccess(user.user))
+    .then(developer => {
+      return dispatch(getDeveloperSuccess(developer.developer))
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
