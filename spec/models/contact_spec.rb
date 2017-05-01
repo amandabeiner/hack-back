@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe Contact, type: :model do
 
-  describe "user" do
+  describe "Contact" do
     let!(:contact) {FactoryGirl.create(:contact)}
 
     it "has the required attributes" do
