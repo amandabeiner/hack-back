@@ -3,6 +3,6 @@ class Organization < ApplicationRecord
   validates :description, presence: true
   validates :mission_statement, presence: true
 
-  belongs_to :user
+  belongs_to :contact
   has_many :projects
 end
