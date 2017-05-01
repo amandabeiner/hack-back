@@ -1,9 +1,9 @@
 import React from 'react';
 import PortfolioProject from './PortfolioProject';
-import UserInfo from './UserInfo';
+import DeveloperInfo from './DeveloperInfo';
 
-const UserProfile = props => {
-  let portfolioProjects = props.user.portfolio_projects;
+const DeveloperProfile = props => {
+  let portfolioProjects = props.developer.portfolio_projects;
   portfolioProjects = portfolioProjects.map((portfolioProject) => {
     return(
       <PortfolioProject
@@ -15,12 +15,12 @@ const UserProfile = props => {
 
   return(
     <div>
-      <img src={props.user.image_url}/>
-      <h1>{props.user.name}</h1>
-      <UserInfo user={props.user} />
+      <img src={props.developer.image_url}/>
+      <h1>{props.developer.name}</h1>
+      <DeveloperInfo developer={props.developer} />
       {portfolioProjects}
     </div>
   )
 }
 
-export default UserProfile;
+export default DeveloperProfile;

@@ -6,5 +6,6 @@ class Api::V1::UsersController < ApplicationController
       render json: user, serializer: Api::V1::DeveloperSerializer
     else
       render json: user, serializer: Api::V1::ContactSerializer
+    end
   end
 end
