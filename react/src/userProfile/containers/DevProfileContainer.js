@@ -9,13 +9,11 @@ class DevProfileContainer extends Component {
   }
 
   render() {
-    let user = this.props.user.user ? this.props.user.user.user : null;
-
-    let userProfileInfo = user ? <UserProfileInfo user={user}/> : null;
+    let user = this.props.user
 
     return(
       <div>
-        {userProfileInfo}
+        <UserProfileInfo user={user} />
       </div>
     )
   }

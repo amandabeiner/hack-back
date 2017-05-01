@@ -1,7 +1,9 @@
 import { FETCH_USER_SUCCESS } from '../actions/userProfile'
 
 const initialState = {
-  user: null
+  user: {
+    portfolioProjects: []
+  }
 }
 
 export const userProfileReducer = (state = initialState, action) => {
