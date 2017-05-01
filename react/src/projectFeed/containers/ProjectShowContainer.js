@@ -23,7 +23,7 @@ class ProjectShowContainer extends Component {
           name={project.name}
           description={project.description}
           stack={project.stack}
-          claimed={project.calimed}
+          claimed={project.claimed}
         />
         <OrganizationProfile
           name={organization.name}
