@@ -67,11 +67,7 @@ describe Api::V1::ProjectsController do
           },
           "contact"=> {
             "id"=> contact.id,
-<<<<<<< HEAD
             "name"=> "Amanda Beiner",
-=======
-            "name"=> "amanda beiner",
->>>>>>> ed4c557d68a3e766816bab7c53a14d2b70845531
             "email"=> "myemail@me.com",
             "image_url"=> "mypicture.com"
           }
