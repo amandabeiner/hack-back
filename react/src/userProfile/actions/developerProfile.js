@@ -9,13 +9,13 @@ export {
 export const getDeveloperSuccess = data => {
   return {
     type: FETCH_DEVELOPER_SUCCESS,
-    developer: data
+    user: data
   }
 }
 
-export const getDeveloper = (developerId) => {
+export const getDeveloper = (userId) => {
   return (dispatch) => {
-    fetch(`/api/v1/users/${developerId}`)
+    fetch(`/api/v1/users/${userId}`)
     .then(response => {
       if (response.ok) {
         return response

@@ -7,7 +7,6 @@ const initialState = {
 export const developerProfileReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_DEVELOPER_SUCCESS:
-      debugger;
       return action.developer
     default:
       return state;
