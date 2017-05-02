@@ -35,7 +35,7 @@ describe Api::V1::DevelopersController do
     }
 
     it "should return a json representation of the specified organization" do
-      get :show, id: developer.id
+      get :show, params: { id: developer.id }
 
       parsed = JSON.parse(response.body)
       expect(response.content_type).to eq("application/json")

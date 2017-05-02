@@ -24,7 +24,7 @@ describe Api::V1::OrganizationsController do
     }
 
     it "should return a json representation of the specified organization" do
-      get :show, id: organization.id
+      get :show, params: { id: organization.id }
 
       parsed = JSON.parse(response.body)
       expect(response.content_type).to eq("application/json")
