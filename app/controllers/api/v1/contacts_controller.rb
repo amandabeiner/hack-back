@@ -1,4 +1,4 @@
-class Api::V1::ContactsController < ApplicationRecord
+class Api::V1::ContactsController < ApplicationController
 
   def show
     contact = Contact.find(params[:id])
