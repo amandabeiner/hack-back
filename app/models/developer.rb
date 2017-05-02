@@ -15,7 +15,6 @@ class Developer < ActiveRecord::Base
     developer.image_url = auth['info']['image']
     developer.github_url = auth['info']['urls']['GitHub']
     developer.token = auth['credentials']['token']
-    developer.role = "developer"
     developer.save
     developer
   end
