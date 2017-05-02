@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe Developer, type: :model do
   mock_auth = {
     "provider"=>"github",
-    "uid"=>"21161427",
+    "uid"=>"123456",
     "info"=> {
       "nickname"=>"amandabeiner",
       "email"=>"myemail@me.com",
@@ -11,7 +11,7 @@ RSpec.describe Developer, type: :model do
       "image"=>"https://avatars2.githubusercontent.com/u/21161427?v=3",
       "urls"=>{"GitHub"=>"https://github.com/amandabeiner", "Blog"=>nil}
     },
-    "credentials"=>{"token"=>"a891871d40d3ec5f1c33638f16d83fb8a7ea1c69", "expires"=>false}
+    "credentials"=>{"token"=>"123456", "expires"=>false}
   }
 
   describe "Developer" do
