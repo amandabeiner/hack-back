@@ -1,5 +1,4 @@
 class Developer < ActiveRecord::Base
-  has_many :organizations
   has_many :portfolio_project_users
   has_many :portfolio_projects, through: :portfolio_project_users
 
@@ -16,7 +15,6 @@ class Developer < ActiveRecord::Base
     developer.image_url = auth['info']['image']
     developer.github_url = auth['info']['urls']['GitHub']
     developer.token = auth['credentials']['token']
-    developer.role = "developer"
     developer.save
     developer
   end

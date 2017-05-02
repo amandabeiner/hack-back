@@ -16,4 +16,8 @@ class Contact < ApplicationRecord
     contact.save
     contact
   end
+
+  def self.organization_auth?(auth)
+    auth["provider"] == "facebook" || auth["provider"] == "linkedin" || auth["provider"] == "google_oauth2"
+  end
 end
