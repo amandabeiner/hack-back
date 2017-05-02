@@ -13,7 +13,8 @@ class OrgProfileContainer extends Component {
 
   render() {
     let organization = this.props.organization
-    let user = this.props.organization.user
+    let contact = organization.contact
+    debugger;
 
     return(
       <div>
@@ -24,9 +25,9 @@ class OrgProfileContainer extends Component {
           website={organization.website}
         />
         <ContactPerson
-          name={user.name}
-          email={user.email}
-          imageUrl={user.image_url}
+          name={contact.name}
+          email={contact.email}
+          imageUrl={contact.image_url}
         />
       </div>
     )
