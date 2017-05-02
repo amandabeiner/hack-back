@@ -33,7 +33,6 @@ RSpec.describe Contact, type: :model do
   end
 
   describe "#find_or_create_contact" do
-
     it "changes the number of contacts in the database by 1" do
       expect { Contact.find_or_create_contact(mock_auth) }.to change{ Contact.count }.by(1)
     end
@@ -49,7 +48,6 @@ RSpec.describe Contact, type: :model do
 
   describe "#organization_auth?" do
     it "should return true if a contact's provider is facebook" do
-
       expect(Contact.organization_auth?(mock_auth)).to eq(true)
     end
   end

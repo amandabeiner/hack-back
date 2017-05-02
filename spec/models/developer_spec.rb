@@ -23,7 +23,6 @@ RSpec.describe Developer, type: :model do
   end
 
   describe "#find_or_create_developer" do
-
     it "changes the number of developers in the database by 1" do
       expect { Developer.find_or_create_developer(mock_auth) }.to change{ Developer.count }.by(1)
     end
@@ -39,7 +38,6 @@ RSpec.describe Developer, type: :model do
 
   describe "#organization_auth?" do
     it "should return false if a developer's provider is github" do
-
       expect(Developer.organization_auth?(mock_auth)).to eq(false)
     end
   end
