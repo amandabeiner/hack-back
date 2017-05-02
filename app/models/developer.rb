@@ -1,5 +1,4 @@
 class Developer < ActiveRecord::Base
-  has_many :organizations
   has_many :portfolio_project_users
   has_many :portfolio_projects, through: :portfolio_project_users
 
