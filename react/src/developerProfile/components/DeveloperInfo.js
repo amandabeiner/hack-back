@@ -1,14 +1,14 @@
 import React from 'react';
 
 const DeveloperInfo = props => {
+  // <li>Languages and skills: {props.developer.skills}</li>
+  // <li>Bio: {props.developer.bio}</li>
   return(
-    <div>
-      <h3>Current Position: {props.developer.current_position}</h3>
-      <h3>Bio: {props.developer.bio}</h3>
-      <h3>Years of Experience: {props.developer.years_of_experience}</h3>
-       <h3>Languages and skills: {props.developer.skills}</h3>
-       <h3>Interests: {props.developer.interests }</h3>
-    </div>
+    <ul>
+      <li>{props.developer.current_position}</li>
+      <li>{props.developer.years_of_experience} years of experience </li>
+      <li>Interested in {props.developer.interests }</li>
+    </ul>
   )
 }
 
