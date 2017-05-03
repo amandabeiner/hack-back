@@ -12,7 +12,7 @@ class DeveloperProfileContainer extends Component {
     let developer = this.props.developer
 
     return(
-      <div>
+      <div className="dev-profile-wrapper">
         <DeveloperProfile developer={developer} />
       </div>
     )

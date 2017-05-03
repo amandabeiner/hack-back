@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PortfolioProject = props => {
-  let name = props.portfolioProject.name ? <h3>{props.portfolioProject.name}</h3> : null;
+  let name = props.portfolioProject.name ? <h3 className="subtitle">{props.portfolioProject.name}</h3> : null;
   let description = props.portfolioProject.description ? <li>Description: {props.portfolioProject.description}</li> : null;
   let githubUrl, sourceUrl;
   if (props.portfolioProject.github_url){
@@ -12,7 +12,7 @@ const PortfolioProject = props => {
   }
 
   return(
-    <div>
+    <div className="portfolio-project-tile">
     {name}
       <ul>
         {description}

@@ -14,7 +14,6 @@ class OrgProfileContainer extends Component {
   render() {
     let organization = this.props.organization
     let contact = organization.contact
-    debugger;
 
     return(
       <div>
