@@ -1,49 +1,22 @@
-.dev-profile-wrapper{
-  background-color: #eeeeee;
-
-  li {
-    list-style-type: none;
-    line-height: 1.25rem;
-  }
-
-  .subtitle {
-    margin: 1% 0 0 1%;
-  }
-
-  .dev-info-container {
-  }
-
-  .basic-info-background {
-    background-color: orange;
-    // background-image: url('http://wallpaper-gallery.net/images/cool-background-wallpaper/cool-background-wallpaper-27.jpg');
-    margin-top: 0;
-    color: white;
-  }
+.dev-profile-wrapper {
 
   .basic-info {
     background: rgba(0, 0, 0, 0.8);
-    max-width: 80%;
-    margin: auto
-  }
-
-  .content {
-    font-family: 'Open Sans', sans-serif;
-    max-width: 80%;
     margin: auto;
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    padding: 3%;
+    color: white;
+    max-width: 80%;
 
     ul {
-      margin-top: 0;
-      padding: 0 0 2rem 0;
-      display: block;
-
+      padding-left: 0;
+      list-style-type: none;
     }
-
   }
 
-  .dev-name{
-    margin-bottom: 0.33rem;
-
+  .more-info {
+    max-width: 80%;
   }
 
   .dev-photo{
@@ -51,20 +24,91 @@
     border-radius: 50%;
   }
 
-  .portfolio-projects {
-    h2 {
-      margin: 0
-    }
+  .orange-background {
+    background-color: orange;
   }
 
-  .portfolio-project-tile, .bio, .skills {
-    background-color: white;
-    border: 1px solid silver;
-    margin-bottom: .75rem;
-    padding: 0 2%;
-  }
-
-  .skills-bio-section {
-    margin-top: 2.3rem;
+  .gray-background {
+    background-color: gray;
+    height: 100vh
   }
 }
+
+
+
+
+// .column {
+//   border: 1px solid black;
+// }
+//
+// .dev-profile-wrapper{
+//   background-color: #eeeeee;
+//
+//     li {
+//       list-style-type: none;
+//       line-height: 1.25rem;
+//     }
+// }
+//
+// .dev-profile-container {
+//   background-color: orange;
+// }
+//   .subtitle {
+//     margin: 1% 0 0 1%;
+//   }
+//
+//   .dev-info-container {
+//   }
+//
+//   .basic-info-background {
+//     background-color: orange;
+//     // background-image: url('http://wallpaper-gallery.net/images/cool-background-wallpaper/cool-background-wallpaper-27.jpg');
+//     margin-top: 0;
+//     color: white;
+//   }
+//
+//   .basic-info {
+//     max-width: 80%;
+//     margin: auto
+//   }
+//
+//   .content {
+//     background: rgba(0, 0, 0, 0.8);
+//     font-family: 'Open Sans', sans-serif;
+//     max-width: 80%;
+//     margin: auto;
+//     text-align: center;
+//
+//     ul {
+//       margin-top: 0;
+//       padding: 0 0 2rem 0;
+//       display: block;
+//
+//     }
+//
+//   }
+//
+  // .dev-name{
+  //   margin-bottom: 0.33rem;
+  //
+  // }
+  //
+//
+//
+//   .portfolio-projects {
+//     h2 {
+//       margin: 0
+//     }
+//   }
+//
+//   .portfolio-project-tile, .bio, .skills {
+//     background-color: white;
+//     border: 1px solid silver;
+//     margin-bottom: .75rem;
+//     padding: 0 2%;
+//   }
+//
+//   .skills-bio-section {
+//     margin-top: 2.3rem;
+//   }
+// }
