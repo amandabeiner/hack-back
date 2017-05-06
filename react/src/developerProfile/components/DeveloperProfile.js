@@ -38,14 +38,14 @@ const DeveloperProfile = props => {
 
       <div className="gray-background">
         <div className="more-info row">
-          <div className="bio-skills column small-4">
-            <div className="bio column small-12">
+          <div className="bio-skills column small-12 medium-4">
+            <div className="bio content-box column small-12">
               <h3 className="subtitle">Bio</h3>
               <DeveloperBio
                 bio={props.developer.bio}
               />
             </div>
-            <div className="skills column small-12">
+            <div className="skills content-box column small-12">
               <h3 className="subtitle">Skills</h3>
               <ul>
                 {developerSkills}
@@ -53,7 +53,7 @@ const DeveloperProfile = props => {
             </div>
           </div>
 
-          <div className="portfolio-projects column small-7">
+          <div className="portfolio-projects column small-12 medium-7">
             <h2>Portfolio</h2>
             {portfolioProjects}
           </div>
