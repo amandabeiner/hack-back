@@ -1,6 +1,7 @@
 import { FETCH_DEVELOPER_SUCCESS } from '../actions/developerProfile'
 
 const initialState = {
+  skills: '',
   portfolio_projects: []
 }
 
