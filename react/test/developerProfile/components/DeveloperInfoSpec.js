@@ -28,11 +28,9 @@ describe('DeveloperInfo', () => {
   );
 
   it("renders the developer's basic info",() => {
-    expect(wrapper.text()).toMatch('Current Position: dog');
-    expect(wrapper.text()).toMatch('Bio: is a dog');
-    expect(wrapper.text()).toMatch('Years of Experience: 1-2');
-    expect(wrapper.text()).toMatch('Languages and skills: sniffing things');
-    expect(wrapper.text()).toMatch('Interests: having fun');
+    expect(wrapper.text()).toMatch('dog');
+    expect(wrapper.text()).toMatch('1-2 years of experience');
+    expect(wrapper.text()).toMatch('Interested in having fun');
 
   })
 })

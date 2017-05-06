@@ -1,0 +1,78 @@
+.dev-profile-wrapper {
+
+  ul {
+    list-style-type: none;
+  }
+
+  .basic-info {
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    padding: 3%;
+    color: white;
+    max-width: 80%;
+
+    ul {
+      padding-left: 0;
+      list-style-type: none;
+    }
+  }
+
+  .dev-photo{
+    max-width: 15rem;
+    border-radius: 50%;
+  }
+
+  .orange-background {
+    background-image: image-url('dev-hero-background.jpg');
+  }
+
+  .more-info {
+    max-width: 80%;
+  }
+
+  .gray-background {
+    background-color: #f7f7f7;
+    height: 100vh
+  }
+
+  .bio-skills {
+    padding: 0;
+    margin-top: 4.75rem;
+  }
+
+  .bio {
+    margin-bottom: 5%;
+  }
+
+  .portfolio-projects {
+    padding: 0;
+
+    ul {
+      margin-top: 0;
+    }
+  }
+
+  .portfolio-project-tile {
+    padding: 1%;
+    margin-bottom: 3%
+  }
+
+  .content-box {
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    border-top: 5px solid #dbdbdb;
+  }
+
+  .portfolio-project-description {
+    font-style: italic;
+    color: #5f5f5f
+  }
+
+  .subtitle {
+    color: #9f2a06;
+    margin-left: 2%;
+    margin-bottom: 0;
+  }
+}

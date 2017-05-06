@@ -68,6 +68,8 @@ GEM
     faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
+    font-awesome-sass (4.7.0)
+      sass (>= 3.2)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     hashie (3.5.5)
@@ -232,6 +234,7 @@ DEPENDENCIES
   capybara
   dotenv-rails
   factory_girl_rails
+  font-awesome-sass
   jquery-rails
   launchy
   listen (~> 3.0.5)
