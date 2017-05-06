@@ -25,7 +25,7 @@
   }
 
   .orange-background {
-    background-color: orange;
+    background-image: image-url('dev-hero-background.jpg');
   }
 
   .more-info {
@@ -48,6 +48,10 @@
 
   .portfolio-projects {
     padding: 0;
+
+    ul {
+      margin-top: 0;
+    }
   }
 
   .portfolio-project-tile {
@@ -60,83 +64,15 @@
     border: 1px solid #dbdbdb;
     border-top: 5px solid #dbdbdb;
   }
+
+  .portfolio-project-description {
+    font-style: italic;
+    color: #5f5f5f
+  }
+
+  .subtitle {
+    color: #9f2a06;
+    margin-left: 2%;
+    margin-bottom: 0;
+  }
 }
-
-
-
-
-// .column {
-//   border: 1px solid black;
-// }
-//
-// .dev-profile-wrapper{
-//   background-color: #eeeeee;
-//
-//     li {
-//       list-style-type: none;
-//       line-height: 1.25rem;
-//     }
-// }
-//
-// .dev-profile-container {
-//   background-color: orange;
-// }
-//   .subtitle {
-//     margin: 1% 0 0 1%;
-//   }
-//
-//   .dev-info-container {
-//   }
-//
-//   .basic-info-background {
-//     background-color: orange;
-//     // background-image: url('http://wallpaper-gallery.net/images/cool-background-wallpaper/cool-background-wallpaper-27.jpg');
-//     margin-top: 0;
-//     color: white;
-//   }
-//
-//   .basic-info {
-//     max-width: 80%;
-//     margin: auto
-//   }
-//
-//   .content {
-//     background: rgba(0, 0, 0, 0.8);
-//     font-family: 'Open Sans', sans-serif;
-//     max-width: 80%;
-//     margin: auto;
-//     text-align: center;
-//
-//     ul {
-//       margin-top: 0;
-//       padding: 0 0 2rem 0;
-//       display: block;
-//
-//     }
-//
-//   }
-//
-  // .dev-name{
-  //   margin-bottom: 0.33rem;
-  //
-  // }
-  //
-//
-//
-//   .portfolio-projects {
-//     h2 {
-//       margin: 0
-//     }
-//   }
-//
-//   .portfolio-project-tile, .bio, .skills {
-//     background-color: white;
-//     border: 1px solid silver;
-//     margin-bottom: .75rem;
-//     padding: 0 2%;
-//   }
-//
-//   .skills-bio-section {
-//     margin-top: 2.3rem;
-//   }
-// }
