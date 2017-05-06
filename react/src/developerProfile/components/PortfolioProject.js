@@ -2,7 +2,7 @@ import React from 'react';
 
 const PortfolioProject = props => {
   let name = props.portfolioProject.name ? <h3 className="subtitle">{props.portfolioProject.name}</h3> : null;
-  let description = props.portfolioProject.description ? <li>Description: {props.portfolioProject.description}</li> : null;
+  let description = props.portfolioProject.description ? <li className="portfolio-project-description"> {props.portfolioProject.description}</li> : null;
   let githubUrl, sourceUrl;
   if (props.portfolioProject.github_url){
     githubUrl = <li><i className="fa fa-github" aria-hidden="true"></i> <a href={props.portfolioProject.github_url}>{props.portfolioProject.github_url}</a></li>
