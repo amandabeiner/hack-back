@@ -1,7 +1,11 @@
 .dev-profile-wrapper {
 
+  ul {
+    list-style-type: none;
+  }
+
   .basic-info {
-    background: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     margin: auto;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
@@ -15,10 +19,6 @@
     }
   }
 
-  .more-info {
-    max-width: 80%;
-  }
-
   .dev-photo{
     max-width: 15rem;
     border-radius: 50%;
@@ -28,9 +28,37 @@
     background-color: orange;
   }
 
+  .more-info {
+    max-width: 80%;
+  }
+
   .gray-background {
-    background-color: gray;
+    background-color: #f7f7f7;
     height: 100vh
+  }
+
+  .bio-skills {
+    padding: 0;
+    margin-top: 4.75rem;
+  }
+
+  .bio {
+    margin-bottom: 5%;
+  }
+
+  .portfolio-projects {
+    padding: 0;
+  }
+
+  .portfolio-project-tile {
+    padding: 1%;
+    margin-bottom: 3%
+  }
+
+  .content-box {
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    border-top: 5px solid #dbdbdb;
   }
 }
 
