@@ -1,6 +1,9 @@
 import DeveloperProfile from 'developerProfile/components/DeveloperProfile';
 import DeveloperInfo from 'developerProfile/components/DeveloperInfo';
 import PortfolioProject from 'developerProfile/components/PortfolioProject';
+import DeveloperBio from 'developerProfile/components/DeveloperBio';
+import DeveloperSkills from 'developerProfile/components/DeveloperSkills';
+import DeveloperProject from 'developerProfile/components/DeveloperProject';
 
 describe('DeveloperProfile', () => {
   let userData =   {
@@ -27,6 +30,19 @@ describe('DeveloperProfile', () => {
           source_url: "https://ok-kyle.herokuapp.com/",
           github_url: "https://github.com/michaelgt04/ok-kyle"
         }
+      ],
+      projects: [
+        {
+          id: 2,
+          name: "approved project",
+          description: "is my serializer working?",
+          stack: "ActiveModel Serializer",
+          claimed: false,
+          organization_id: 1,
+          created_at: "2017-05-07T20:18:10.941Z",
+          updated_at: "2017-05-07T20:18:10.941Z",
+          completed: false
+        }
       ]
     }
   }
@@ -46,9 +62,21 @@ describe('DeveloperProfile', () => {
   })
 
 
-  it("renders a UserInfo component", () => {
+  it("renders a DeveloperInfo component", () => {
     expect(wrapper.find(DeveloperInfo)).toBePresent();
   });
+
+  it('renders a DeveloperBio component', () => {
+    expect(wrapper.find(DeveloperBio)).toBePresent();
+  })
+
+  it('renders a DeveloperSkills component', () => {
+    expect(wrapper.find(DeveloperSkills)).toBePresent();
+  })
+
+  it('renders DeveloperProject components', () => {
+    expect(wrapper.find(DeveloperProject)).toBePresent();
+  })
 
   it("renders PortfolioProject components", () => {
     expect(wrapper.find(PortfolioProject)).toBePresent();
