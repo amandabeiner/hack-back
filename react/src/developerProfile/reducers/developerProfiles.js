@@ -2,7 +2,8 @@ import { FETCH_DEVELOPER_SUCCESS } from '../actions/developerProfile'
 
 const initialState = {
   skills: '',
-  portfolio_projects: []
+  portfolio_projects: [],
+  projects: []
 }
 
 export const developerProfileReducer = (state = initialState, action) => {

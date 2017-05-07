@@ -1,6 +1,8 @@
 class Developer < ActiveRecord::Base
   has_many :portfolio_project_users
   has_many :portfolio_projects, through: :portfolio_project_users
+  has_many :project_memberships
+  has_many :projects, through: :project_memberships
 
   validates :years_of_experience, inclusion: {in: ["0-1", "1-2", "3-5", "5-10", "10+"]}, allow_nil: true
 
