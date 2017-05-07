@@ -3,10 +3,11 @@ import PortfolioProject from './PortfolioProject';
 import DeveloperInfo from './DeveloperInfo';
 import DeveloperBio from './DeveloperBio';
 import DeveloperSkills from './DeveloperSkills';
+import DeveloperProject from './DeveloperProject';
 
 const DeveloperProfile = props => {
-  let projects = props.developer.portfolio_projects;
-  let portfolioProjects = projects.map((portfolioProject) => {
+  let portProjects = props.developer.portfolio_projects;
+  let portfolioProjects = portProjects.map((portfolioProject) => {
     return(
       <PortfolioProject
         key={portfolioProject.id}
@@ -23,6 +24,15 @@ const DeveloperProfile = props => {
         skill={skill}
       />
     );
+  })
+
+  let projects = props.developer.projects.map(project => {
+    return(
+      <DeveloperProject
+        key={project.id}
+        project={project}
+      />
+    )
   })
 
   return(
@@ -53,9 +63,14 @@ const DeveloperProfile = props => {
             </div>
           </div>
 
-          <div className="portfolio-projects column small-12 medium-7">
+          <div className="projects column small-12 medium-7 medium-offset-1">
             <h2>Portfolio</h2>
             {portfolioProjects}
+          </div>
+
+          <div className="projects small-12">
+            <h2>Recent Projects</h2>
+            {projects}
           </div>
         </div>
       </div>

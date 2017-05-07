@@ -28,7 +28,8 @@ describe('DeveloperProfileContainer', () => {
             years_of_experience: '1-2',
             skills: 'writing the codes',
             interests: 'dogs, pizza, food, lots of food',
-            portfolio_projects: []
+            portfolio_projects: [],
+            projects: []
           }
         }
       )

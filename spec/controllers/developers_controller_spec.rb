@@ -5,6 +5,9 @@ describe Api::V1::DevelopersController do
   let!(:okkyle) { FactoryGirl.create(:portfolio_project)
   }
   let!(:portfolio_project_user) { FactoryGirl.create(:portfolio_project_user, developer: developer, portfolio_project: okkyle)}
+  let!(:organization) { FactoryGirl.create(:organization) }
+  let!(:project) { FactoryGirl.create(:project, organization: organization) }
+  let!(:project_membership) { FactoryGirl.create(:project_membership, developer: developer, project: project, approved: true) }
 
   describe "#show" do
     let!(:expected_json) {
@@ -28,6 +31,19 @@ describe Api::V1::DevelopersController do
               "description"=> "there's a kyle for that",
               "source_url"=> "ok-kyle.herokuapp.com",
               "github_url"=>"github.com/michaelgt04/ok-kyle"
+            }
+          ],
+          "projects" => [
+            {
+              "id" => project.id,
+              "name" => "Demolish the Patriarchy",
+              "description"=> "self explanatory",
+              "stack" => "Beyonce",
+              "claimed" => false,
+              "organization_id" => organization.id,
+              "created_at" => "#{project.created_at.iso8601(3)}",
+              "updated_at" => "#{project.updated_at.iso8601(3)}",
+              "completed" =>  false
             }
           ]
         }

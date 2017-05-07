@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170501160417) do
+ActiveRecord::Schema.define(version: 20170507205153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,6 +68,16 @@ ActiveRecord::Schema.define(version: 20170501160417) do
     t.string "github_url"
   end
 
+  create_table "project_memberships", force: :cascade do |t|
+    t.integer  "project_id",                   null: false
+    t.integer  "developer_id"
+    t.boolean  "approved",     default: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.index ["developer_id"], name: "index_project_memberships_on_developer_id", using: :btree
+    t.index ["project_id"], name: "index_project_memberships_on_project_id", using: :btree
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string   "name",                            null: false
     t.string   "description",                     null: false
@@ -76,6 +86,7 @@ ActiveRecord::Schema.define(version: 20170501160417) do
     t.integer  "organization_id"
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
+    t.boolean  "completed",       default: false
     t.index ["organization_id"], name: "index_projects_on_organization_id", using: :btree
   end
 
