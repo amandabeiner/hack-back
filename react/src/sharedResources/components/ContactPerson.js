@@ -3,9 +3,11 @@ import React from 'react';
 const ContactPerson = props => {
   return(
     <div className='row'>
-      <h2>Contact</h2>
-      <img className='contact-image small-6 medium-4 columns' src={props.imageUrl} />
-      <div className='small-12 medium-8 columns'>
+      <h2 className='small-12 columns'>Contact</h2>
+      <div className='small-4 columns'>
+        <img className='contact-image' src={props.imageUrl} />
+      </div>
+      <div className='small-8 columns'>
         <h4 className='contact-name'>{props.name}</h4>
         <a className='contact-email' href={props.email}>{props.email}</a>
       </div>

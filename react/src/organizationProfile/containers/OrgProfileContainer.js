@@ -16,24 +16,32 @@ class OrgProfileContainer extends Component {
     let contact = organization.contact
 
     return(
-      <div className='org-profile-wrapper row'>
-        <div className='org-info small-12 columns'>
-          <OrganizationProfile
-            name={organization.name}
-            description={organization.description}
-            missionStatement={organization.mission_statement}
-            website={organization.website}
-          />
+      <div className='org-profile-wrapper'>
+        <div className='dark-grey-background'>
+          <div className='row'>
+            <div className='org-info small-12 columns'>
+              <OrganizationProfile
+                name={organization.name}
+                description={organization.description}
+                missionStatement={organization.mission_statement}
+                website={organization.website}
+              />
+            </div>
+          </div>
         </div>
-        <div className='small-12 medium-8 columns'>
-          <h2>Projects</h2>
-        </div>
-        <div className='small-12 medium-4 columns'>
-          <ContactPerson
-            name={contact.name}
-            email={contact.email}
-            imageUrl={contact.image_url}
-          />
+        <div className='off-white-background'>
+          <div className='row'>
+            <div className='small-12 medium-8 columns'>
+              <h2>Projects</h2>
+            </div>
+            <div className='small-12 medium-4 columns'>
+              <ContactPerson
+                name={contact.name}
+                email={contact.email}
+                imageUrl={contact.image_url}
+              />
+            </div>
+          </div>
         </div>
       </div>
     )
