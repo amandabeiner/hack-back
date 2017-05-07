@@ -1,0 +1,40 @@
+.org-profile-wrapper {
+
+  h2 {
+    color: #D35348
+  }
+
+  .org-info {
+    background-color: #AEBDC7;
+    color: white;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    padding: 3%;
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  .contact-image {
+    border-radius: 50%;
+  }
+
+  .contact-name {
+    line-height: .5rem;
+  }
+
+  .org-logo {
+    max-height: 15rem;
+    border-radius: 50%;
+  }
+
+  .dark-grey-background {
+    background-color: #272E48;
+  }
+
+  .off-white-background {
+    background-color: lighten(#F3E4D8, 20%);
+    height: 40vh;
+  }
+}
