@@ -43,6 +43,7 @@ describe Api::V1::DevelopersController do
               "organization_id" => organization.id,
               "created_at" => "#{project.created_at.iso8601(3)}",
               "updated_at" => "#{project.updated_at.iso8601(3)}",
+              "completed" =>  false
             }
           ]
         }

@@ -18,6 +18,7 @@ describe Api::V1::ProjectsController do
             "claimed"=>false,
             "created_at"=>"#{project.created_at.iso8601(3)}",
             "updated_at"=>"#{project.updated_at.iso8601(3)}",
+            "completed" => false,
             "organization"=> {
                "id"=>organization.id,
                 "name"=>"The best organization",
@@ -58,12 +59,13 @@ describe Api::V1::ProjectsController do
           "claimed"=> false,
           "created_at"=> "#{project.created_at.iso8601(3)}",
           "updated_at"=> "#{project.updated_at.iso8601(3)}",
+          "completed" => false,
           "organization"=> {
             "id"=> organization.id,
             "name"=> "The best organization",
             "description"=> "the best one. this one. obviously.",
             "mission_statement"=> "crush it",
-            "website"=> "www.thebestorg.org"
+            "website"=> "www.thebestorg.org",
           },
           "contact"=> {
             "id"=> contact.id,
