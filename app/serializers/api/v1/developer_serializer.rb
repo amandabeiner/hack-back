@@ -18,6 +18,6 @@ class Api::V1::DeveloperSerializer < ActiveModel::Serializer
 
     projects = Project.where(id: memberships)
 
-    return projects
+    return projects.limit(5)
   end
 end
