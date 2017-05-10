@@ -1,6 +1,6 @@
 namespace :specs do
   desc "Run all React tests"
   task frontend: :environment do
-    system('npm test -- --single-run')
+    system('yarn test -- --single-run')
   end
 end
