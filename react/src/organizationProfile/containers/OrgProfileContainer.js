@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { getOrgProfile } from '../actions/orgProfile';
 import OrganizationProfile from '../../sharedResources/components/OrganizationProfile';
 import ContactPerson from '../../sharedResources/components/ContactPerson';
+import OrganizationDescription from '../../sharedResources/components/OrganizationDescription';
 
 class OrgProfileContainer extends Component {
   componentDidMount(){
@@ -22,7 +23,6 @@ class OrgProfileContainer extends Component {
             <div className='org-info small-12 columns'>
               <OrganizationProfile
                 name={organization.name}
-                description={organization.description}
                 missionStatement={organization.mission_statement}
                 website={organization.website}
               />
@@ -32,7 +32,9 @@ class OrgProfileContainer extends Component {
         <div className='off-white-background'>
           <div className='row'>
             <div className='small-12 medium-8 columns'>
-              <h2>Projects</h2>
+              <OrganizationDescription
+                description={organization.description}
+              />
             </div>
             <div className='small-12 medium-4 columns'>
               <ContactPerson
@@ -40,6 +42,11 @@ class OrgProfileContainer extends Component {
                 email={contact.email}
                 imageUrl={contact.image_url}
               />
+            </div>
+          </div>
+          <div className='row'>
+            <div className='small-12 columns'>
+              <h2>Projects</h2>
             </div>
           </div>
         </div>
