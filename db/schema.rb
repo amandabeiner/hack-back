@@ -96,8 +96,10 @@ ActiveRecord::Schema.define(version: 20170508215229) do
     t.integer  "timeliness",      null: false
     t.text     "review"
     t.integer  "developer_id"
+    t.integer  "contact_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.index ["contact_id"], name: "index_reviews_on_contact_id", using: :btree
     t.index ["developer_id"], name: "index_reviews_on_developer_id", using: :btree
   end
 

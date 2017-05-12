@@ -43,7 +43,8 @@ describe('DeveloperProfile', () => {
           updated_at: "2017-05-07T20:18:10.941Z",
           completed: false
         }
-      ]
+      ],
+      reviews: []
     }
   }
 

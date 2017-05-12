@@ -4,5 +4,6 @@ class Review < ApplicationRecord
   validates :timeliness, presence: true, inclusion: {in: 1..5}
 
   belongs_to :developer
+  belongs_to :contact
 
 end

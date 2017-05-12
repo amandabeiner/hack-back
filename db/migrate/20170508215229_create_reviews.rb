@@ -7,6 +7,7 @@ class CreateReviews < ActiveRecord::Migration[5.0]
       t.text :review
 
       t.belongs_to :developer
+      t.belongs_to :contact
       t.timestamps
     end
   end

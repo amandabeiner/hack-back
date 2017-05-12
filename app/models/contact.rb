@@ -5,6 +5,7 @@ class Contact < ApplicationRecord
   validates :uid, presence: true
   validates :provider, presence: true
   has_many :organizations
+  has_many :reviews
 
   private
 

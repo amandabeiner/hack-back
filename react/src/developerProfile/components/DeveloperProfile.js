@@ -4,8 +4,29 @@ import DeveloperInfo from './DeveloperInfo';
 import DeveloperBio from './DeveloperBio';
 import DeveloperSkills from './DeveloperSkills';
 import DeveloperProject from './DeveloperProject';
+import DeveloperReview from './DeveloperReview';
 
 const DeveloperProfile = props => {
+  let sum = 0
+  let allReviews = props.developer.reviews
+  let average;
+  let tmpAvg = [];
+  let i;
+
+  allReviews.map(review => {
+    sum += review.professionalism
+    sum += review.timeliness
+    sum += review.tech_skills
+  })
+
+  let unroundedAvg = sum/((props.developer.reviews.length)*3)
+  average = Math.floor(unroundedAvg)
+
+
+  for(i = 1; i <= props.average; i++){
+    tmpAvg.push(i)
+  }
+
   let portProjects = props.developer.portfolio_projects;
   let portfolioProjects = portProjects.map((portfolioProject) => {
     return(
@@ -35,6 +56,16 @@ const DeveloperProfile = props => {
     )
   })
 
+  let reviews = props.developer.reviews.map(review => {
+    return(
+      <DeveloperReview
+        key={review.id}
+        review={review}
+        average={average}
+      />
+    )
+  })
+
   return(
 
     <div className="dev-profile-container">
@@ -42,7 +73,10 @@ const DeveloperProfile = props => {
         <div className="basic-info">
           <img className="dev-photo" src={props.developer.image_url}/>
           <h1 className="dev-name">{props.developer.name}</h1>
-          <DeveloperInfo developer={props.developer} />
+          <DeveloperInfo
+            developer={props.developer}
+            average = {average}
+          />
         </div>
       </div>
 
@@ -68,9 +102,14 @@ const DeveloperProfile = props => {
             {portfolioProjects}
           </div>
 
-          <div className="projects small-12">
+          <div className="projects column small-12 medium-7">
             <h2>Recent Projects</h2>
             {projects}
+          </div>
+
+          <div className="projects column small-12 medium-4">
+            <h2>Reviews ({props.developer.reviews.length})</h2>
+            {reviews}
           </div>
         </div>
       </div>

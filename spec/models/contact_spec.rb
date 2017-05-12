@@ -30,6 +30,7 @@ RSpec.describe Contact, type: :model do
     it { should_not have_valid(:provider).when(nil) }
 
     it { should have_many(:organizations) }
+    it { should have_many(:reviews) }
   end
 
   describe "#find_or_create_contact" do

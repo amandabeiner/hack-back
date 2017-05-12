@@ -2,12 +2,14 @@ require "rails_helper"
 
 describe Api::V1::DevelopersController do
   let!(:developer) { FactoryGirl.create(:developer)}
+  let!(:contact) { FactoryGirl.create(:contact) }
   let!(:okkyle) { FactoryGirl.create(:portfolio_project)
   }
   let!(:portfolio_project_user) { FactoryGirl.create(:portfolio_project_user, developer: developer, portfolio_project: okkyle)}
   let!(:organization) { FactoryGirl.create(:organization) }
   let!(:project) { FactoryGirl.create(:project, organization: organization) }
   let!(:project_membership) { FactoryGirl.create(:project_membership, developer: developer, project: project, approved: true) }
+  let!(:review) { FactoryGirl.create(:review, developer: developer, contact: contact) }
 
   describe "#show" do
     let!(:expected_json) {
@@ -41,16 +43,30 @@ describe Api::V1::DevelopersController do
               "stack" => "Beyonce",
               "claimed" => false,
               "organization_id" => organization.id,
-              "created_at" => "#{project.created_at.iso8601(3)}",
+              "created_at" =>
+              "#{project.created_at.iso8601(3)}",
               "updated_at" => "#{project.updated_at.iso8601(3)}",
               "completed" =>  false
+            }
+          ],
+          "reviews" => [
+            {
+              "id" => review.id,
+              "professionalism" => 4,
+              "timeliness"=> 3,
+              "tech_skills" => 5,
+              "review" => "I'm really happy with the final product, but communication could be better",
+              "developer_id" => developer.id,
+              "contact_id" => contact.id,
+              "created_at" => "#{review.created_at.iso8601(3)}",
+              "updated_at" => "#{review.updated_at.iso8601(3)}",
             }
           ]
         }
       }
     }
 
-    it "should return a json representation of the specified organization" do
+    it "should return a json representation of the specified developer" do
       get :show, params: { id: developer.id }
 
       parsed = JSON.parse(response.body)
