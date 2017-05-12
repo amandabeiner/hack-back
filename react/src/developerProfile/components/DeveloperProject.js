@@ -10,12 +10,12 @@ const DeveloperProject = props => {
   }
 
   return(
-    <div className="">
-      <h3 className="">{props.project.name}</h3>
+    <div className="project-tile content-box">
+      <h3 className="subtitle">{props.project.name}</h3>
       <ul>
-        <li className="">{props.project.description}</li>
+        <li className="project-description">{props.project.description}</li>
         <li><i className="fa fa-stack-overflow" aria-hidden="true"></i> {props.project.stack}</li>
-        <li><i className="fa fa-globe" aria-hidden="true"></i><h4>Project Link</h4></li>
+        <li><i className="fa fa-globe" aria-hidden="true"></i><Link to={`organization/${props.project.organization_id}/profile`}>Organization Profile</Link></li>
         <li>{completeText}</li>
       </ul>
     </div>
