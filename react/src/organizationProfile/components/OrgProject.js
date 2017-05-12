@@ -22,4 +22,4 @@ const OrgProject = props => {
   )
 }
 
-export default DeveloperProject;
+export default OrgProject;

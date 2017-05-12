@@ -19,7 +19,8 @@ class OrgProfileContainer extends Component {
     let projects = organization.projects.map(project => {
       return(
         <OrgProject
-          project=project
+          key={project.id}
+          project={project}
         />
       )
     })
@@ -56,6 +57,7 @@ class OrgProfileContainer extends Component {
           </div>
           <div className='row'>
             <div className='small-12 columns'>
+              <h2>Projects</h2>
               {projects}
             </div>
           </div>
