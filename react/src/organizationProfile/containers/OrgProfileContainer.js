@@ -5,6 +5,7 @@ import { getOrgProfile } from '../actions/orgProfile';
 import OrganizationProfile from '../../sharedResources/components/OrganizationProfile';
 import ContactPerson from '../../sharedResources/components/ContactPerson';
 import OrganizationDescription from '../../sharedResources/components/OrganizationDescription';
+import OrgProject from '../components/OrgProject';
 
 class OrgProfileContainer extends Component {
   componentDidMount(){
@@ -15,6 +16,15 @@ class OrgProfileContainer extends Component {
   render() {
     let organization = this.props.organization
     let contact = organization.contact
+    let projects = organization.projects.map(project => {
+      return(
+        <OrgProject
+          project=project
+        />
+      )
+    })
+
+
 
     return(
       <div className='org-profile-wrapper'>
@@ -46,7 +56,7 @@ class OrgProfileContainer extends Component {
           </div>
           <div className='row'>
             <div className='small-12 columns'>
-              <h2>Projects</h2>
+              {projects}
             </div>
           </div>
         </div>
