@@ -15,7 +15,7 @@ const OrgProject = props => {
       <ul>
         <li className="project-description">{props.project.description}</li>
         <li><i className="fa fa-stack-overflow" aria-hidden="true"></i> {props.project.stack}</li>
-        <li><i className="fa fa-globe" aria-hidden="true"></i> <Link to={`/organizations/${props.project.organization_id}/profile`}>Organization Profile</Link></li>
+        <li><i className="fa fa-globe" aria-hidden="true"></i><h4>Organization Profile</h4></li>
         <li>{completeText}</li>
       </ul>
     </div>
