@@ -37,4 +37,14 @@
     background-color: lighten(#F3E4D8, 15%);
     height: 40vh;
   }
+
+  .project-tile {
+    ul {
+      list-style-type: none;
+    }
+
+    .project-description {
+      font-style: italic;
+    }
+  }
 }

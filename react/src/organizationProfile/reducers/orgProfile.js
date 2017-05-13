@@ -2,7 +2,8 @@ import { FETCH_ORG_PROFILE_SUCCESS } from '../actions/orgProfile'
 
 const initialState = {
   organization: {
-    contact: {}
+    contact: {},
+    projects: []
   }
 }
 
