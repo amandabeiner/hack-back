@@ -1,8 +1,8 @@
 import React from 'react';
 import Star from './Star';
+import { Link } from 'react-router';
 
 const DeveloperReview = props => {
-  debugger;
   let professionalism;
   let timeliness;
   let techSkills;
@@ -10,7 +10,7 @@ const DeveloperReview = props => {
   let tmpProf = [];
   let tmpTime = [];
   let tmpTech = [];
-  
+
 
   for(i = 1; i <= props.review.professionalism; i++){
     tmpProf.push(i)
@@ -68,6 +68,7 @@ const DeveloperReview = props => {
       <div>
         <p>{props.review.review}</p>
       </div>
+      <span className="review-attribution">Left by {props.review.contact.name} from <Link to={`/organizations/${props.review.contact.organization_id}/profile`}>{props.review.contact.organization_name}</Link></span>
     </div>
   )
 }
