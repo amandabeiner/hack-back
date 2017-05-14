@@ -4,6 +4,7 @@ import { Router, Route, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import configureStore from './sharedResources/store/configureStore';
 
+import LayoutContainer from './sharedResources/containers/LayoutContainer'
 import DeveloperProfileContainer from './developerProfile/containers/DeveloperProfileContainer'
 import OrgProfileContainer from './organizationProfile/containers/OrgProfileContainer'
 import ProjectShowContainer from './projectFeed/containers/ProjectShowContainer'
@@ -13,10 +14,12 @@ const Root = props => {
   return(
     <Provider store={props.store}>
       <Router history={props.history}>
-        <Route path='developers/:id/profile' component={DeveloperProfileContainer} />
-        <Route path='organizations/:id/profile' component={OrgProfileContainer}/>
-        <Route path='projects' component={ProjectIndexContainer} />
-        <Route path='projects/:id' component={ProjectShowContainer} />
+        <Route path='/' component={LayoutContainer}>
+          <Route path='developers/:id/profile' component={DeveloperProfileContainer} />
+          <Route path='organizations/:id/profile' component={OrgProfileContainer}/>
+          <Route path='projects' component={ProjectIndexContainer} />
+          <Route path='projects/:id' component={ProjectShowContainer} />
+        </Route>
       </Router>
     </Provider>
   )
