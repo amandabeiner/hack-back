@@ -15,9 +15,9 @@ class LayoutContainer extends Component {
   render(){
     return(
       <div>
-      <NavBar
-        currentUser={this.props.currentUser}
-      />
+        <NavBar
+          currentUser={this.props.currentUser}
+        />
       {this.props.children}
       </div>
     )
