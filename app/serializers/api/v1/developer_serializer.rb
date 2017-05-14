@@ -10,7 +10,7 @@ class Api::V1::DeveloperSerializer < ActiveModel::Serializer
   end
 
   def reviews
-    object.reviews.limit(5)
+    ActiveModel::ArraySerializer.new(object.reviews, each_serializer: Api::V1::ReviewSerializer)
   end
 
   private
