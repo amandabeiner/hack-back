@@ -6,6 +6,8 @@ describe('DeveloperProfileContainer', () => {
     spyOn(global, 'fetch').and.callFake(url => {
       if(url.endsWith('/api/v1/developers/1')) {
         return(createResponseFromFixture('developerProfile/developer'))
+      } else if(url.endsWith('/api/v1/sessions')) {
+        return(createResponseFromFixture('sessions/developer'))
       }
     });
 

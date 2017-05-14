@@ -6,6 +6,8 @@ describe('ProjectIndexContainer', () => {
     spyOn(global, 'fetch').and.callFake(url => {
       if(url.endsWith('/api/v1/projects')) {
         return(createResponseFromFixture('projectFeed/projects'))
+      } else if(url.endsWith('/api/v1/sessions')) {
+        return(createResponseFromFixture('sessions/developer'))
       }
     });
 

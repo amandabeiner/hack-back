@@ -9,6 +9,8 @@ describe('OrgProfileContainer', () => {
     spyOn(global, 'fetch').and.callFake(url => {
       if(url.endsWith('/api/v1/organizations/1')) {
         return(createResponseFromFixture('orgProfile/organization'))
+      } else if(url.endsWith('/api/v1/sessions')) {
+        return(createResponseFromFixture('sessions/developer'))
       }
     });
 

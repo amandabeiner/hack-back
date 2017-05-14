@@ -1,0 +1,44 @@
+{
+  "developer": {
+    "id": 4,
+    "nickname": "michaelgt04",
+    "name": "Mike Thomson",
+    "email": "michaelgt04@gmail.com",
+    "image_url": "https://avatars2.githubusercontent.com/u/20232897?v=3",
+    "github_url": "https://github.com/michaelgt04",
+    "bio": "I am a person. I write code",
+    "current_position": "EE",
+    "years_of_experience": "1-2",
+    "skills": "none",
+    "interests": "dogs, pizza, food, lots of food",
+    "portfolio_projects": [
+      {
+        "id": 1,
+        "name": "Ok-Kyle",
+        "description": "Ever more Kyle. Theres a Kyle for that.",
+        "source_url": "https://ok-kyle.herokuapp.com/",
+        "github_url": "https://github.com/michaelgt04/ok-kyle"
+      },
+      {
+        "id": 2,
+        "name": "Hack Back",
+        "description": "Cool people making cool things",
+        "source_url": "https://hack-back.herokuapp.com",
+        "github_url": "https://github.com/amandabeiner/hack-back"
+      }
+    ],
+    "projects": [
+      {
+        "id": 3,
+        "name": "Make Organization Site",
+        "description": "This site will actually get us out there online",
+        "stack": "Ruby, React, things",
+        "claimed": true,
+        "organization_id": 1,
+        "created_at": "2017-05-12T21:52:05.519Z",
+        "updated_at": "2017-05-12T21:52:05.519Z",
+        "completed": false
+      }
+    ]
+  }
+}
