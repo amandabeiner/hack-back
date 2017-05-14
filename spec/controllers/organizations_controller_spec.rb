@@ -18,7 +18,8 @@ describe Api::V1::OrganizationsController do
             "id"=> contact.id,
             "name"=> "Amanda Beiner",
             "email"=> "myemail@me.com",
-            "image_url"=> "mypicture.com"
+            "image_url"=> "mypicture.com",
+            "organization_id"=>organization.id
           },
           "projects"=>[
             {
