@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import DeveloperProfile from '../components/DeveloperProfile'
 import { getDeveloper } from '../actions/developerProfile'
+import { displayNextReviews } from '../actions/displayReviews'
+import { hideExtraReviews } from '../actions/displayReviews'
 import { connect } from 'react-redux'
 
 class DeveloperProfileContainer extends Component {
@@ -13,7 +15,11 @@ class DeveloperProfileContainer extends Component {
 
     return(
       <div className="dev-profile-wrapper">
-        <DeveloperProfile developer={developer} />
+        <DeveloperProfile
+          developer={developer}
+          displayNextReviews={this.props.displayNextReviews}
+          hideExtraReviews={this.props.hideExtraReviews}
+        />
       </div>
     )
   }
@@ -29,6 +35,12 @@ let mapDispatchToProps = dispatch => {
   return {
     getDeveloperProfile: (developerId) => {
       dispatch(getDeveloper(developerId));
+    },
+    displayNextReviews: () => {
+      dispatch(displayNextReviews())
+    },
+    hideExtraReviews: () => {
+      dispatch(hideExtraReviews())
     }
   }
 }

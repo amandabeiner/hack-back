@@ -56,7 +56,11 @@ const DeveloperProfile = props => {
     )
   })
 
-  let reviews = props.developer.reviews.map(review => {
+  let displayedReviews = props.developer.reviews.filter(review => {
+    return props.developer.reviews.indexOf(review) <= props.developer.lastVisibleReviewIndex
+  })
+
+  let reviews = displayedReviews.map(review => {
     return(
       <DeveloperReview
         key={review.id}
@@ -65,6 +69,17 @@ const DeveloperProfile = props => {
       />
     )
   })
+
+  let moreReviewsButton;
+  if (props.developer.reviews.length > props.developer.lastVisibleReviewIndex){
+    moreReviewsButton = <button onClick={props.displayNextReviews}>Get More Reviews</button>
+  }
+
+  let hideReviewsButton;
+  if (props.developer.lastVisibleReviewIndex > 4){
+    hideReviewsButton = <button onClick={props.hideExtraReviews}>See Less</button>
+  }
+
 
   return(
 
@@ -110,6 +125,8 @@ const DeveloperProfile = props => {
           <div className="projects column small-12 medium-4">
             <h2>Reviews ({props.developer.reviews.length})</h2>
             {reviews}
+            {moreReviewsButton}
+            {hideReviewsButton}
           </div>
         </div>
       </div>

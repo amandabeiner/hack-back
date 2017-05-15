@@ -54,21 +54,21 @@ const DeveloperReview = props => {
   return(
     <div className="content-box review-tile">
       <div>
-        <span>Professionalism:</span>
+        <span>Professionalism: </span>
         {professionalism}
       </div>
       <div>
-        <span>Timeliness:</span>
+        <span>Timeliness: </span>
         {timeliness}
       </div>
       <div>
-        <span>Technical Skill:</span>
+        <span>Technical Skill: </span>
         {techSkills}
       </div>
       <div>
         <p>{props.review.review}</p>
       </div>
-      <span className="review-attribution">Left by {props.review.contact.name} from <Link to={`/organizations/${props.review.contact.organization_id}/profile`}>{props.review.contact.organization_name}</Link></span>
+      <p className="review-attribution">Left by {props.review.contact.name} from <Link to={`/organizations/${props.review.contact.organization_id}/profile`}>{props.review.contact.organization_name}</Link></p>
     </div>
   )
 }
