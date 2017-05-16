@@ -10,7 +10,7 @@ describe('OrgProfileContainer', () => {
       if(url.endsWith('/api/v1/organizations/1')) {
         return(createResponseFromFixture('orgProfile/organization'))
       } else if(url.endsWith('/api/v1/sessions')) {
-        return(createResponseFromFixture('sessions/developer'))
+        return(createResponseFromFixture('sessions/contact'))
       }
     });
 

@@ -2,11 +2,6 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const NavBar = props => {
-  let handleLogout = event => {
-    event.preventDefault()
-    window.location.href = '/logout'
-  }
-
   let profileLink;
   if (props.currentUser.developer){
     profileLink = <Link to={`/developers/${props.currentUser.developer.id}/profile`}>My Profile</Link>
@@ -15,7 +10,7 @@ const NavBar = props => {
   }
   return(
     <div>
-      <a href='' onClick={handleLogout}>Logout</a>
+      <a href='/logout'>Logout</a>
       <Link to='/projects'>Projects</Link>
       <Link to='/dashboard'>Dashboard</Link>
       {profileLink}
