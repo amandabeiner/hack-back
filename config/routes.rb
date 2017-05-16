@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
 
 
-  delete '/logout', to: 'sessions#destroy'
+  get '/logout', to: 'sessions#destroy'
 
   namespace :api do
     namespace :v1 do
@@ -18,6 +18,7 @@ Rails.application.routes.draw do
       resources :contacts, only: [:show]
       resources :organizations, only: [:show]
       resources :projects, only: [:index, :show]
+      get '/sessions', to: 'sessions#show'
     end
   end
 end

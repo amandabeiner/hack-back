@@ -31,6 +31,7 @@ describe Api::V1::ProjectsController do
               "name"=>"Amanda Beiner",
               "email"=>"myemail@me.com",
               "image_url"=>"mypicture.com",
+              "organization_id"=>organization.id
             }
           }
         ]
@@ -71,7 +72,8 @@ describe Api::V1::ProjectsController do
             "id"=> contact.id,
             "name"=> "Amanda Beiner",
             "email"=> "myemail@me.com",
-            "image_url"=> "mypicture.com"
+            "image_url"=> "mypicture.com",
+            "organization_id"=>organization.id
           }
         }
       }

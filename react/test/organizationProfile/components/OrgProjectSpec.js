@@ -48,7 +48,6 @@ describe('OrgProject', () => {
         project={finishedProject}
       />
     )
-    console.log(finished.text())
     expect(finished.text()).toMatch('Complete')
   })
 })
