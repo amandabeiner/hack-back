@@ -9,7 +9,7 @@ const NavBar = props => {
     profileLink = <Link to={`/organizations/${props.currentUser.contact.organization_id}/profile`}>My Profile</Link>
   }
   return(
-    <div>
+    <div className='nav-bar'>
       <a href='/logout'>Logout</a>
       <Link to='/projects'>Projects</Link>
       <Link to='/dashboard'>Dashboard</Link>

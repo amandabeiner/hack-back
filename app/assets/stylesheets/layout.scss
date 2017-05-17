@@ -1,0 +1,15 @@
+.nav-bar {
+  background-color: rgba(39, 46, 72, .8);
+  height: 30px;
+  width: 100%;
+  position: fixed;
+
+
+  a {
+    text-decoration: none;
+    color: lighten(#F3E4D8, 10%);
+    margin: 0 10px;
+    font-size: 1.20rem;
+    font-weight: 500;
+  }
+}

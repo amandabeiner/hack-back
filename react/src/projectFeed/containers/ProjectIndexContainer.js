@@ -26,7 +26,7 @@ class ProjectIndexContainer extends Component {
     })
 
     return(
-      <div>
+      <div className='projects-index'>
         <h1>Project Index</h1>
         {projects}
       </div>
