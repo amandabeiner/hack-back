@@ -1,7 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Router, Route, browserHistory } from 'react-router';
-import { syncHistoryWithStore } from 'react-router-redux';
 import configureStore from './sharedResources/store/configureStore';
 
 import DeveloperProfileContainer from './developerProfile/containers/DeveloperProfileContainer'

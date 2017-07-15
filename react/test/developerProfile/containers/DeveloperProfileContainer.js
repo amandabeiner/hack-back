@@ -1,4 +1,5 @@
 import DeveloperProfile from 'developerProfile/components/DeveloperProfile'
+// import DeveloperProfileContainer from 'developerProfile/containers/DeveloperProfileContainer';
 
 describe('DeveloperProfileContainer', () => {
 
@@ -8,6 +9,13 @@ describe('DeveloperProfileContainer', () => {
         return(createResponseFromFixture('developerProfile/developer'))
       }
     });
+
+    // let displayNextReviews = jasmine.createSpy('displayNextReviews spy')
+
+    // let hideExtraReviews = jasmine.createSpy('hideExtraReviews spy')
+
+    // spyOn(DeveloperProfileContainer.prototype, 'displayNextReviews')
+    // spyOn(DeveloperProfileContainer.prototype, 'hideExtraReviews')
 
     wrapper = mountReactAppAt('/developers/1/profile')
   });
@@ -30,8 +38,8 @@ describe('DeveloperProfileContainer', () => {
             interests: 'dogs, pizza, food, lots of food',
             portfolio_projects: [],
             projects: [],
-            reviews: []
-          }
+            reviews: [],
+          },
         }
       )
       done();
